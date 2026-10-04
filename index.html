@@ -91,6 +91,142 @@
         </ul>
       </section>
 
+        <section id="meus-jogos">
+        <h2>Meus jogos no estádio</h2>
+        <p>Registre as partidas do Galo a que você assistiu ao vivo e guarde suas lembranças.</p>
+
+        <h3>Registrar jogo</h3>
+        <form action="#" method="post">
+            <fieldset>
+            <legend>Dados da partida</legend>
+            <div class="campos-linha">
+                <div class="campo">
+                <label for="adversario">Adversário</label>
+                <input type="text" id="adversario" name="adversario" placeholder="Ex.: Cruzeiro" required>
+                </div>
+                <div class="campo">
+                <label for="data-jogo">Data do jogo</label>
+                <input type="date" id="data-jogo" name="data-jogo" required>
+                </div>
+                <div class="campo">
+                <label for="competicao">Competição</label>
+                <select id="competicao" name="competicao" required>
+                    <option value="">Selecione</option>
+                    <option value="brasileirao">Campeonato Brasileiro</option>
+                    <option value="copa-do-brasil">Copa do Brasil</option>
+                    <option value="libertadores">Copa Libertadores</option>
+                    <option value="mineiro">Campeonato Mineiro</option>
+                    <option value="amistoso">Amistoso</option>
+                </select>
+                </div>
+                <div class="campo">
+                <label for="estadio">Estádio</label>
+                <input type="text" id="estadio" name="estadio" value="Arena MRV">
+                </div>
+                <div class="campo">
+                <label for="gols-galo">Gols do Galo</label>
+                <input type="number" id="gols-galo" name="gols-galo" min="0" value="0" required>
+                </div>
+                <div class="campo">
+                <label for="gols-adv">Gols do adversário</label>
+                <input type="number" id="gols-adv" name="gols-adv" min="0" value="0" required>
+                </div>
+                <div class="campo">
+                <label for="setor">Setor onde assisti</label>
+                <select id="setor" name="setor">
+                    <option value="">Selecione</option>
+                    <option value="norte">Norte</option>
+                    <option value="sul">Sul</option>
+                    <option value="leste">Leste</option>
+                    <option value="oeste">Oeste</option>
+                    <option value="camarote">Camarote</option>
+                </select>
+                </div>
+                <div class="campo">
+                <label for="nota">Nota para o jogo (0 a 10)</label>
+                <input type="range" id="nota" name="nota" min="0" max="10" value="5">
+                </div>
+            </div>
+            </fieldset>
+        </form>
+
+        <h3>Meus jogos registrados</h3>
+        <form action="#" class="ferramentas" role="search">
+            <div class="campo">
+            <label for="busca-jogo">Pesquisar adversário</label>
+            <input type="search" id="busca-jogo" name="busca-jogo" placeholder="Digite um time">
+            </div>
+            <div class="campo">
+            <label for="filtro-resultado">Filtrar por resultado</label>
+            <select id="filtro-resultado" name="filtro-resultado">
+                <option value="">Todos</option>
+                <option value="vitoria">Vitória</option>
+                <option value="empate">Empate</option>
+                <option value="derrota">Derrota</option>
+            </select>
+            </div>
+            <div class="campo">
+            <label for="ordem-jogo">Ordenar por</label>
+            <select id="ordem-jogo" name="ordem-jogo">
+                <option value="data">Data (mais recente)</option>
+                <option value="adversario">Adversário (A-Z)</option>
+                <option value="nota">Nota</option>
+            </select>
+            </div>
+            <button type="button">Aplicar</button>
+        </form>
+
+        <div class="tabela-rolagem">
+            <table>
+            <caption>Jogos a que assisti (dados fictícios para teste)</caption>
+            <thead>
+                <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Adversário</th>
+                <th scope="col">Competição</th>
+                <th scope="col">Placar</th>
+                <th scope="col">Resultado</th>
+                <th scope="col">Nota</th>
+                <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>15/04/2023</td><td>Cruzeiro</td><td>Campeonato Mineiro</td><td>2 x 1</td><td>Vitória</td><td>9</td>
+                <td><button type="button" class="secundario">Ver detalhes</button> <button type="button" class="secundario">Editar</button> <button type="button" class="perigo">Excluir</button></td>
+                </tr>
+                <tr>
+                <td>10/09/2023</td><td>Flamengo</td><td>Campeonato Brasileiro</td><td>1 x 1</td><td>Empate</td><td>7</td>
+                <td><button type="button" class="secundario">Ver detalhes</button> <button type="button" class="secundario">Editar</button> <button type="button" class="perigo">Excluir</button></td>
+                </tr>
+                <tr>
+                <td>22/05/2024</td><td>Palmeiras</td><td>Copa do Brasil</td><td>0 x 2</td><td>Derrota</td><td>4</td>
+                <td><button type="button" class="secundario">Ver detalhes</button> <button type="button" class="secundario">Editar</button> <button type="button" class="perigo">Excluir</button></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <h3>Detalhes do jogo</h3>
+        <article class="detalhe">
+            <img src="img/jogo-cruzeiro.jpg" alt="Foto da torcida na Arena MRV no jogo contra o Cruzeiro">
+            <div>
+            <h4>Atlético 2 x 1 Cruzeiro</h4>
+            <ul>
+                <li><strong>Data:</strong> 15/04/2023</li>
+                <li><strong>Competição:</strong> Campeonato Mineiro</li>
+                <li><strong>Estádio:</strong> Arena MRV</li>
+                <li><strong>Setor:</strong> Norte</li>
+                <li><strong>Fui com:</strong> Pai e amigos</li>
+                <li><strong>Nota:</strong> 9 de 10</li>
+            </ul>
+            <p>Relato: clássico com estádio lotado, virada no segundo tempo e a Massa cantando até o final.</p>
+            <button type="button" class="secundario">Editar</button>
+            <button type="button" class="perigo">Excluir</button>
+            </div>
+        </article>
+        </section>
+
     </main>
 
     <aside>

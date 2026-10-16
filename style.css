@@ -91,7 +91,7 @@ nav ul {
 }
 nav a {
   display: block;
-  padding: 15px 18px;
+  padding: 15px 30px;
   color: #ffffff;
   text-decoration: none;
   border-bottom: 4px solid transparent;
@@ -115,9 +115,9 @@ nav a:focus {
   grid-template-columns: 1fr 300px;
   gap: 25px;
   align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 15px;
+  max-width: none;
+  margin: 0;
+  padding: 40px 5%;
 }
 main {
   display: grid;
